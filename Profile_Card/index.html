@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Simulator</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <section class="wrapper__section">
+        <article class="profile__card">
+            <div class="like__btn">
+                <img src="assets/img/ui/like_regular.png" alt="like_ui_icon" width="30">
+            </div>
+            <div class="share__btn"></div>
+
+            <div class="img">
+                <img src="assets/img/img-1.jpg" alt="user_profile_pic_1" width="300" height="400">
+            </div>
+            <div class="content">
+                <div class="user__info">
+                    <h1 class="username">Manuel Jaime</h1>
+                    <div>
+                        <span>Estudante de Tecnologia</span>
+                        <span>Programador Frontend</span>
+                    </div>
+                </div>
+                <div class="user__stacks">
+                    <h3 class="subtitle">Stacks</h3>
+                    <div class="stacks__group">
+                        <img src="assets/img/img_stacks/html_icon.png" alt="html_logo" width="40" title="">
+                        <img src="assets/img/img_stacks/css_icon.png" alt="css_logo" width="40">
+                        <img src="assets/img/img_stacks/js_icon.png" alt="js_logo" width="40">
+                        <img src="assets/img/img_stacks/py_icon.png" alt="python_logo" width="40">
+                        <img src="assets/img/img_stacks/node_icon.png" alt="nodejs_logo" width="35">
+                        <img src="assets/img/img_stacks/mysql_icon.png" alt="mysql_logo" width="40">
+                    </div>
+                </div>
+                <div class="button">
+                    <!-- <a href="#">Ver mais</a> -->
+                    <a href="#" class="hover-effect">
+                        <span></span>
+                        Ver mais
+                      </a>
+                </div>
+            </div>
+        </article>
+    </section>
+    <script>
+        const images = document.querySelectorAll('img')
+        images.forEach(img =>{
+            img.setAttribute('loading', 'lazy')
+        })
+
+        const likeBtn = document.querySelector('.like__btn img')
+
+        likeBtn.onclick = ()=> {
+            likeBtn.setAttribute('src', 'assets/img/ui/like_filled.png')
+        }
+        
+    </script>
+</body>
+</html>
